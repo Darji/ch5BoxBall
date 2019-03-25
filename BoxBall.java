@@ -7,7 +7,6 @@ import java.awt.geom.*;
  */
 public class BoxBall
 {   
-    private int ballDegradation = 1;
     private Ellipse2D.Double circle;
     private Color color;
     private int diameter;
@@ -76,28 +75,29 @@ public class BoxBall
         // the border        
         if(yPosition >= (bounds.getMaxY() - diameter) && ySpeed > 0) {
             yPosition = (int)(bounds.getMaxY() - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+            ySpeed = -ySpeed; 
             if(ySpeed > 0) {
                 ySpeed = 0;
             }//end of if
         }// end of if
         else if(yPosition <= (bounds.getMinY()) && ySpeed < 0) {
             yPosition = (int)(bounds.getMinY()) + 1;
-            ySpeed = -ySpeed - ballDegradation; 
+            ySpeed = -ySpeed; 
             if(ySpeed < 0) {
                 ySpeed = 0;
             }// end of if
         }//end of else
+        
         if(xPosition >= (bounds.getMaxX() - diameter) && xSpeed > 0) {
             xPosition = (int)(bounds.getMaxX() - diameter);
-            xSpeed = -xSpeed + ballDegradation; 
+            xSpeed = -xSpeed; 
             if(xSpeed > 0) {
                 xSpeed = 0;
             }//end of if
         }// end of if
         else if(xPosition <= (bounds.getMinX()) && xSpeed < 0) {
             xPosition = (int)(bounds.getMinX()) + 1;
-            xSpeed = -xSpeed - ballDegradation;
+            xSpeed = -xSpeed;
             if(xSpeed < 0) {
                 xSpeed = 0;
             }// end of if
