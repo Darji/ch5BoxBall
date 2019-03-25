@@ -44,26 +44,26 @@ public class BoxBall
         canvas = drawingCanvas;
     } //end of BoxBall
 
-    /**
-     * Draw this ball at its current position onto the canvas.
-     */
+    
+    //Draw this ball at its current position onto the canvas.
+    
     public void draw()
     {
         canvas.setForegroundColor(color);
         canvas.fillCircle(xPosition, yPosition, diameter);
     }// end of void draw
 
-    /**
-     * Erase this ball at its current position.
-     */
+    
+    //Erase this ball at its current position.
+     
     public void erase()
     {
         canvas.eraseCircle(xPosition, yPosition, diameter);
     }// end of erase    
 
-    /**
-     * Move this ball according to its position and speed and redraw.
-     */
+    
+    //Move this ball according to its position and speed and redraw.
+     
     public void move()
     {
         // remove current pos
@@ -106,25 +106,25 @@ public class BoxBall
         draw();
     }// end of move    
 
-    /**
-     * return the horizontal position of this ball
-     */
+    
+    //return the horizontal position of this ball
+     
     public int getXPosition()
     {
         return xPosition;
     }//end of xPos
-
-    /**
-     * return the vertical position of this ball
-     */
+    
+    
+    //return the vertical position of this ball
+     
     public int getYPosition()
     {
         return yPosition;
     }//end of yPos
     
-    /**
-     * return true if the ball is still moving
-     */
+   
+    // return true if the ball is still moving
+     
     public boolean isMoving() {
         return (xSpeed != 0  || ySpeed != 0);
     }//end of isMoving
