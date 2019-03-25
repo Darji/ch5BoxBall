@@ -7,7 +7,7 @@ import java.awt.Color;
  * @author Bill Crosbie
  * @version 2015-March-BB
  *
- * @author Michael KÃ¶lling and David J. Barnes
+ * @author Michael Kšlling and David J. Barnes
  * @version 2011.07.31
  */
 
